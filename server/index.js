@@ -16,8 +16,17 @@ const PORT = process.env.PORT || 5001;
 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173'],
-    credentials: true
+    origin: [
+        'http://localhost:5173', 
+        'http://localhost:3000', 
+        'http://127.0.0.1:5173',
+        'https://webpify-gamma.vercel.app',  // Add your Vercel domain
+        'https://webpify.vercel.app',        // In case you change the subdomain
+        // Add any other domains you might deploy to
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
