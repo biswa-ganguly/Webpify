@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react"
+import { Analytics } from '@vercel/analytics/react';
 
 import Header from "./components/Header"
 import FileUploadArea from "./components/FileUpload/FileUploadArea"
@@ -251,6 +252,8 @@ function App() {
   }
 
   return (
+    <>
+      <Analytics />
     <div className="min-h-screen bg-gray-900 text-white py-8 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <Header mode={mode} onModeChange={handleModeChange} />
@@ -268,6 +271,7 @@ function App() {
         </footer>
       </div>
     </div>
+    </>
   )
 }
 
