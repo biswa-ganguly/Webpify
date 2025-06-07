@@ -20,8 +20,7 @@ app.use(cors({
         'http://localhost:5173', 
         'http://localhost:3000', 
         'http://127.0.0.1:5173',
-        'https://webpify-gamma.vercel.app',  // Add your Vercel domain
-        'https://webpify.vercel.app',        // In case you change the subdomain
+        'https://webpify-gamma.vercel.app',  // Add your Vercel domain     // In case you change the subdomain
         // Add any other domains you might deploy to
     ],
     credentials: true,
